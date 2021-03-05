@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    #moon{
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        bottom: -150px;
+        z-index: 5555;
+        -webkit-box-reflect: below 15pc   -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.1, transparent), to(rgba(0,0,0,0.1)));cursor:pointer;offset: bottom 100px;
+    }
+
+    #fcc {
+    display: none;
+    position: absolute;
+    background-color: rgba(0,0,0,0);
+    z-index: 100;
+    }
+    #zj{
+    display: block;
+    position: absolute;
+    background-color: rgba(255,255,255,0);
+    z-index: 80;
+    }
+
+    #rabbit{
+    display:none;
+    width: 123px;
+    height: 100px;
+    position: absolute;
+    top: 28px;
+    left: 162px;
+    transform: rotate(10deg);
+    z-index: 5556;
+    }
+    #x1,#x2,#x3,#x4,#x5,#x6,#x7,#x8,#x9{
+        -webkit-box-reflect: below 25pc    -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.1, transparent), to(rgba(0,0,0,0.1)));cursor:pointer;offset: bottom 100px;
+    }
+    #y1,#y2,#y3,#y4,#y5,#y6,#y7,#y8,#autumn{
+        -webkit-box-reflect: below 2px   -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.1, transparent), to(rgba(0,0,0,0.2)));cursor:pointer;offset: bottom 100px;
+    }
+
+
+</style>
+<body style="background-color: black">
+<div id="div3" style="width:1536px;height: 750px;background-color:black; display: none;overflow: hidden; z-index: -1"></div>
+<img id="leaves" src="http://m.qpic.cn/psc?/V12iv8SC21OH92/bqQfVz5yrrGYSXMvKr.cqd17vhpWkpbtpZcdm5.tQiCjjlPjW253i1t40dY7XdjFNy7rUlMUJF7I0EEchoQ7qZuEf7PB8hDZf6dMZGXOKdE!/b&bo=2gCYANoAmAADByI!&rf=viewer_4" alt="" style="position: absolute;width: 30px;height: 30px;left: 0;top: 40%;rotation: 45deg;z-index: 5555" >
+<img id="guihua" src="http://m.qpic.cn/psc?/V12iv8SC21OH92/TmEUgtj9EK6.7V8ajmQrEEvxIHCQs3FxGxO4uDWugmcE5LlYBZ*OISk4HG8VTc1DqVpE3Cj471Q6wbrPJTNFIGl*6px0m.WTgBdHWc*TGFg!/b&bo=OARnBAAAAAADVy0!&rf=viewer_4" alt="" style="position: absolute;width: 300px;height: 300px;right: 0px;top: 40%;z-index: 6000">
+<img id="guihua_left" src="http://m.qpic.cn/psc?/V12iv8SC21OH92/TmEUgtj9EK6.7V8ajmQrEOvNbIVJsCxIOPhFuZ32cZn8RIQaCKALnhkca0hkH.UBc7gpt39xU9O59Vdy06SnwyRZFfOTw8YsthYwI3Optbw!/b&bo=egT1AwAAAAADR.o!&rf=viewer_4" alt="" style="position: absolute;width: 250px;height: 250px;left: 0px;top: 35%;z-index: 6000">
+<img id="moon" src="http://m.qpic.cn/psc?/V12iv8SC21OH92/bqQfVz5yrrGYSXMvKr.cqXtF2Tqz9RobdtFEqUqh3yxsuS3NbXM62wxfSJEy2HzjsprlIaE7a85oxlHsaIZr7goccC3ovKM3V3V9ZM33keQ!/b&bo=OARUBAAAAAADB04!&rf=viewer_4" alt="" style="position: absolute;width: 300px;height: 300px">
+<img id="x1" src="http://m.qpic.cn/psc?/V52UeO930eELja22NIAk3fmrqm3twN5z/ruAMsa53pVQWN7FLK88i5gepSEI4dtVrY7qYUD74dV2Ty666zywD3gtF5VXGKHUFCtgp60YwtiSpzvieEoIk.gyMXrU17qFrEfAG2gbyF7s!/b&bo=BgH3AAAAAAADB9I!&rf=viewer_4" alt="" style="position: absolute;display: none">
+<img id="x2" src="http://m.qpic.cn/psc?/V52UeO930eELja22NIAk3fmrqm3twN5z/45NBuzDIW489QBoVep5mcWcjlaVEvX03m6YB1dI79EYCCHsvecXl6jG4EX.jga4x7uu.7*FouU5AIMvdboU4pmzvvs3J5wgMj7lyVj9c.bI!/b&bo=igKKAgAAAAADFzI!&rf=viewer_4" alt="" style="position: absolute;display: none">
+<img id="x3" src="http://m.qpic.cn/psc?/V52UeO930eELja22NIAk3fmrqm3twN5z/45NBuzDIW489QBoVep5mcWcjlaVEvX03m6YB1dI79EYCCHsvecXl6jG4EX.jga4x7uu.7*FouU5AIMvdboU4pmzvvs3J5wgMj7lyVj9c.bI!/b&bo=igKKAgAAAAADFzI!&rf=viewer_4" alt="" style="position: absolute;display: none">
+<img id="x4" src="http://m.qpic.cn/psc?/V52UeO930eELja22NIAk3fmrqm3twN5z/45NBuzDIW489QBoVep5mcWcjlaVEvX03m6YB1dI79EYCCHsvecXl6jG4EX.jga4x7uu.7*FouU5AIMvdboU4pmzvvs3J5wgMj7lyVj9c.bI!/b&bo=igKKAgAAAAADFzI!&rf=viewer_4" alt="" style="position: absolute;display: none">
+<img id="x5" src="http://m.qpic.cn/psc?/V52UeO930eELja22NIAk3fmrqm3twN5z/45NBuzDIW489QBoVep5mcWcjlaVEvX03m6YB1dI79EYCCHsvecXl6jG4EX.jga4x7uu.7*FouU5AIMvdboU4pmzvvs3J5wgMj7lyVj9c.bI!/b&bo=igKKAgAAAAADFzI!&rf=viewer_4" alt="" style="position: absolute;display: none">
+<img id="x6" src="http://m.qpic.cn/psc?/V52UeO930eELja22NIAk3fmrqm3twN5z/45NBuzDIW489QBoVep5mcWcjlaVEvX03m6YB1dI79EYCCHsvecXl6jG4EX.jga4x7uu.7*FouU5AIMvdboU4pmzvvs3J5wgMj7lyVj9c.bI!/b&bo=igKKAgAAAAADFzI!&rf=viewer_4" alt="" style="position: absolute;display: none">
+<img id="x7" src="http://m.qpic.cn/psc?/V52UeO930eELja22NIAk3fmrqm3twN5z/45NBuzDIW489QBoVep5mcWcjlaVEvX03m6YB1dI79EYCCHsvecXl6jG4EX.jga4x7uu.7*FouU5AIMvdboU4pmzvvs3J5wgMj7lyVj9c.bI!/b&bo=igKKAgAAAAADFzI!&rf=viewer_4" alt="" style="position: absolute;display: none">
+<img id="x8" src="http://m.qpic.cn/psc?/V52UeO930eELja22NIAk3fmrqm3twN5z/45NBuzDIW489QBoVep5mcWcjlaVEvX03m6YB1dI79EYCCHsvecXl6jG4EX.jga4x7uu.7*FouU5AIMvdboU4pmzvvs3J5wgMj7lyVj9c.bI!/b&bo=igKKAgAAAAADFzI!&rf=viewer_4" alt="" style="position: absolute;display: none">
+<img id="x9" src="http://m.qpic.cn/psc?/V52UeO930eELja22NIAk3fmrqm3twN5z/45NBuzDIW489QBoVep5mcWcjlaVEvX03m6YB1dI79EYCCHsvecXl6jG4EX.jga4x7uu.7*FouU5AIMvdboU4pmzvvs3J5wgMj7lyVj9c.bI!/b&bo=igKKAgAAAAADFzI!&rf=viewer_4" alt="" style="position: absolute;display: none">
+
+<img id="y1" src="http://m.qpic.cn/psc?/V52UeO930eELja22NIAk3fmrqm3twN5z/ruAMsa53pVQWN7FLK88i5m2Cluivz*X9xAUTA8Z.iBdD61*JyTFRcVh*mncpAuSawv2MHQFLLrL.xXYc9mvDsTpApD3OaG22UD1CRixvk.E!/b&bo=8wNEAgAAAAADB5Q!&rf=viewer_4" alt="" style="display: none;position: absolute">
+<img id="y2" src="http://m.qpic.cn/psc?/V52UeO930eELja22NIAk3fmrqm3twN5z/ruAMsa53pVQWN7FLK88i5m2Cluivz*X9xAUTA8Z.iBdD61*JyTFRcVh*mncpAuSawv2MHQFLLrL.xXYc9mvDsTpApD3OaG22UD1CRixvk.E!/b&bo=8wNEAgAAAAADB5Q!&rf=viewer_4" alt="" style="display: none;position: absolute">
+<img id="y3" src="http://m.qpic.cn/psc?/V52UeO930eELja22NIAk3fmrqm3twN5z/ruAMsa53pVQWN7FLK88i5m2Cluivz*X9xAUTA8Z.iBdD61*JyTFRcVh*mncpAuSawv2MHQFLLrL.xXYc9mvDsTpApD3OaG22UD1CRixvk.E!/b&bo=8wNEAgAAAAADB5Q!&rf=viewer_4" alt="" style="display: none;position: absolute">
+<img id="y4" src="http://m.qpic.cn/psc?/V52UeO930eELja22NIAk3fmrqm3twN5z/ruAMsa53pVQWN7FLK88i5m2Cluivz*X9xAUTA8Z.iBdD61*JyTFRcVh*mncpAuSawv2MHQFLLrL.xXYc9mvDsTpApD3OaG22UD1CRixvk.E!/b&bo=8wNEAgAAAAADB5Q!&rf=viewer_4" alt="" style="display: none;position: absolute">
+<img id="y5" src="http://m.qpic.cn/psc?/V52UeO930eELja22NIAk3fmrqm3twN5z/ruAMsa53pVQWN7FLK88i5m2Cluivz*X9xAUTA8Z.iBdD61*JyTFRcVh*mncpAuSawv2MHQFLLrL.xXYc9mvDsTpApD3OaG22UD1CRixvk.E!/b&bo=8wNEAgAAAAADB5Q!&rf=viewer_4" alt="" style="display: none;position: absolute">
+<img id="y6" src="http://m.qpic.cn/psc?/V52UeO930eELja22NIAk3fmrqm3twN5z/ruAMsa53pVQWN7FLK88i5m2Cluivz*X9xAUTA8Z.iBdD61*JyTFRcVh*mncpAuSawv2MHQFLLrL.xXYc9mvDsTpApD3OaG22UD1CRixvk.E!/b&bo=8wNEAgAAAAADB5Q!&rf=viewer_4" alt="" style="display: none;position: absolute">
+<img id="y7" src="http://m.qpic.cn/psc?/V52UeO930eELja22NIAk3fmrqm3twN5z/ruAMsa53pVQWN7FLK88i5m2Cluivz*X9xAUTA8Z.iBdD61*JyTFRcVh*mncpAuSawv2MHQFLLrL.xXYc9mvDsTpApD3OaG22UD1CRixvk.E!/b&bo=8wNEAgAAAAADB5Q!&rf=viewer_4" alt="" style="display: none;position: absolute">
+<img id="y8" src="http://m.qpic.cn/psc?/V52UeO930eELja22NIAk3fmrqm3twN5z/ruAMsa53pVQWN7FLK88i5m2Cluivz*X9xAUTA8Z.iBdD61*JyTFRcVh*mncpAuSawv2MHQFLLrL.xXYc9mvDsTpApD3OaG22UD1CRixvk.E!/b&bo=8wNEAgAAAAADB5Q!&rf=viewer_4" alt="" style="display: none;position: absolute">
+<img id="y9" src="http://m.qpic.cn/psc?/V52UeO930eELja22NIAk3fmrqm3twN5z/ruAMsa53pVQWN7FLK88i5m2Cluivz*X9xAUTA8Z.iBdD61*JyTFRcVh*mncpAuSawv2MHQFLLrL.xXYc9mvDsTpApD3OaG22UD1CRixvk.E!/b&bo=8wNEAgAAAAADB5Q!&rf=viewer_4" alt="" style="display: none;position: absolute">
+<img id="autumn" src="http://m.qpic.cn/psc?/V12iv8SC21OH92/bqQfVz5yrrGYSXMvKr.cqQEXea5sCY7KLTT*ke2e94DFXgnqtNBZ4W3nhym5z5f1nj5mBvHLo9dWe2GYEKZOw3XpaIEPIq*J51*BPmYs4Is!/b&bo=gQgFBAAAAAADB6o!&rf=viewer_4" alt="" style="position: absolute;display: none;z-index: 5556">
+<!--<div id="moon">-->
+<!--        <div class="pit"></div>-->
+<!--        <div class="pit"></div>-->
+<!--        <div class="pit"></div>-->
+<!--        <div class="pit"></div>-->
+<!--        <div class="pit"></div>-->
+<!--        <div class="pit"></div>-->
+<!--</div>-->
+<canvas id="fcc"></canvas>
+<canvas id="zj"></canvas>
+<img id="rabbit" src="http://m.qpic.cn/psc?/V52UeO930eELja22NIAk3fmrqm3twN5z/ruAMsa53pVQWN7FLK88i5kTTmeZMrwYEzH0ZIxwtaDHAzUNpLwRtjnSDBV2FAgxFpJcTsl0S.ukQPFL3XAG*mLWLeyfQ.WuPaUydxMndnFo!/b&bo=ZAPAAgAAAAADB4c!&rf=viewer_4" alt="" >
+</body>
+<script src="https://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script>
+var h = window.innerHeight;
+var w = window.innerWidth;
+
+var leaves = document.getElementById("leaves");
+var angle = 0;
+function rand(min,max) {
+    return Math.random()*(max-min)+min;
+}
+
+autumn_style = document.getElementById("autumn");
+autumn_style.style.width = 300+"px";
+autumn_style.style.height = 142+"px";
+autumn_style.style.bottom = 0.25*h + "px";
+autumn_style.style.left = 0.5*w - 150 + "px";
+setTimeout(function () {
+    $("#autumn").fadeIn(3500);
+},4000);
+
+
+
+
+setTimeout(function () {
+        function repetition(x){
+            var a = document.getElementById("x"+x+"");
+
+            a.style.width = wid+"px";
+            a.style.height = wid+"px";
+            a.style.display = "none";
+            a.style.left = rand(0,w-100)+"px";
+            a.style.top = rand(0,0.6)*h+"px";
+            a.style.zIndex = 5559;
+            a.style.animation = "myfirst"+x+" 30s infinite alternate";
+            p.insertRule("@keyframes myfirst"+x+"\n" +
+                "{\n" +
+                "0%   {left:"+rand(0,w-100)+"px"+"; top:"+rand(0,0.5*h)+"px"+";}\n" +
+                "25%  {left:"+rand(0,w-100)+"px"+"; top:"+rand(0,0.5*h)+"px"+";}\n" +
+                "50%  {left:"+rand(0,w-100)+"px"+"; top:"+rand(0,0.5*h)+"px"+";}\n" +
+                "75%  {left:"+rand(0,w-100)+"px"+"; top:"+rand(0,0.5*h)+"px"+";}\n" +
+                "100% {left:"+a.style.left+"px"+"; top:"+a.style.top+"px"+";}\n" +
+                "}",x);
+            $("#x"+x+"").fadeIn(3000);
+            }
+
+        var p = document.styleSheets[0];
+
+            for(var i=1;i<10;i++){
+            var a = document.getElementById("x"+i+"");
+
+            if(i == 1){
+                var wid = 120;
+            }else {
+                var wid = rand(60,110)
+            }
+
+                repetition(i);
+        }
+},3000);
+
+setTimeout(function () {
+        function repetition_2(z){
+            var a = document.getElementById("y"+z+"");
+
+            a.style.width = wid+"px";
+            a.style.height = hei+"px";
+            a.style.display = "none";
+            a.style.left = rand(0,w-100)+"px";
+            a.style.top = rand(0.7,0.9)*h+"px";
+
+            a.style.zIndex = 4000;
+
+            a.style.animation = "mysecond"+z+" 40s infinite alternate";
+            d.insertRule("@keyframes mysecond"+z+"\n" +
+                "{\n" +
+                "0%   {left:"+rand(0,w-100)+"px"+"; top:"+rand(0.7,0.9)*h+"px"+";}\n" +
+                "25%  {left:"+rand(0,w-100)+"px"+"; top:"+rand(0.7,0.9)*h+"px"+";}\n" +
+                "50%  {left:"+rand(0,w-100)+"px"+"; top:"+rand(0.7,0.9)*h+"px"+";}\n" +
+                "75%  {left:"+rand(0,w-100)+"px"+"; top:"+rand(0.7,0.9)*h+"px"+";}\n" +
+                "100% {left:"+a.style.left+"px"+"; top:"+a.style.top+"px"+";}\n" +
+                "}");
+            $("#y"+z+"").fadeIn(3000);
+            }
+
+        var d = document.styleSheets[0];
+
+            for(var i=1;i<10;i++){
+
+                var wid = rand(80,100);
+                var hei = wid*0.58;
+
+                repetition_2(i);
+        }
+},3000);
+
+        // $("#div3").fadeIn(3000);
+        $("#moon").animate({top:"35px"},3000);
+        // setTimeout(function () {
+        $("#fcc").fadeIn(3000);
+        setInterval(function () {
+            $("#rabbit").fadeIn(1000);
+            $("#lantern").animate({top:"0",left:"500px"},3000)
+            // $("#lantern").fadeIn()
+
+        },3000);
+
+function f() {
+    
+}
+
+var pos_y = 0.35*h;
+function change() {
+    var xspeed = rand(3,12);//树叶下落速度
+    var yspeed = 0;
+    var timer = setInterval(function () {
+        angle+=10;
+        xspeed+=rand(1,3);
+        yspeed+=4;
+        if(xspeed<570&&yspeed<1530){
+           leaves.style.top = pos_y+yspeed+"px";
+           leaves.style.left = xspeed+"px";
+           leaves.style.transform = "rotate("+angle+"deg"+")"
+
+       } else {
+            clearInterval(timer)
+       }
+    },1000/60)
+
+    }
+
+setInterval(function () {
+      change();
+    },rand(8000,11000));
+
+
+        setTimeout(function () {
+            can = document.getElementById("fcc");
+            ctx = can.getContext("2d");
+            var h = can.height = window.innerHeight;
+            var w = can.width = window.innerWidth;
+            var color = "rgba(" + Math.ceil(Math.random() * 255) + "," + Math.ceil(Math.random() * 255) + "," + Math.ceil(Math.random() * 255) + "," + 0.6 + ")";
+            function rand(min,max) {
+                return Math.random()*(max-min)+min;
+            }
+            function Star() {
+                this.pos_x = rand(0,w);
+                this.pos_y = rand(0,0.4)*h;
+                this.r = rand(1,3);
+                this.out_r = this.r+4;
+            }
+            Star.prototype.draw = function () {
+                var grd = ctx.createRadialGradient(this.pos_x, this.pos_y, this.r-0.5, this.pos_x, this.pos_y, this.out_r);
+                grd.addColorStop(0, "#B2B2FF");
+                grd.addColorStop(1, color);
+                ctx.fillStyle = grd;
+                ctx.beginPath();
+                ctx.arc(this.pos_x, this.pos_y,this.r, 0, Math.PI * 2, true);
+                ctx.closePath();
+                ctx.fill();
+            };
+            for(var i=0;i<80;i++){
+                var star = new Star();
+                star.draw();
+            }
+                },3000);
+
+
+
+
+
+
+</script>
+</html>
